@@ -21,11 +21,26 @@ class KeyCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemGray5
-        contentView.addSubview(<#T##view: UIView##UIView#>)
+        backgroundColor = .systemGray2
+        contentView.addSubview(label)
+        NSLayoutConstraint.activate([label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                                     label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                                     label.topAnchor.constraint(equalTo: contentView.topAnchor),
+                                     label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+                                    ])
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        label.text = nil
+    }
+    
+    func configuration(with letter: Character) {
+        label.text = String(letter).uppercased()
+    }
+    
 }
