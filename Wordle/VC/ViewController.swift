@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let answers = ["abuse","adult", "agent", "anger", "apple", "award", "basis", "beach", "birth", "block",
+    let answers = ["abuse","adult","agent","anger","apple","award","basis","beach","birth","block","blame",
                    "blood", "board","brain","bread","break","brown","buyer","cause","chain","chair","chest",
                    "chief", "child","china","claim","class","clock","coach","coast","court","cover","cream",
                    "crime", "cross","crowd","crown","cycle","dance","death","depth","doubt","draft","drama",
